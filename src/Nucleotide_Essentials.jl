@@ -1,4 +1,4 @@
-module Nuclotide_Essentials
+module Nucleotide_Essentials
 
 import  CSV, 
         DataFrames, 
