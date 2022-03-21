@@ -3,6 +3,7 @@ Demultiplex.jl
 
 
 """
+using DataFrames, CSV, Glob
 
 function potential_mismatches(og_barcode::String, mismatch::Int64 = 1)
     potentials = []
@@ -87,7 +88,6 @@ end
 
 
 function demultiplex(R1::String, Map::String, Dir::String, Reads::String="Single", R2::String="", Out::String="Demultiplexing_Output", verbose::Bool=false)
-    using DataFrames, CSV, Glob
     mkdir(string(Dir,"/",Out))
     pre_dmx = readFastq(R1) # this is our forward multiplexed reads
     if Reads == "Paired"
