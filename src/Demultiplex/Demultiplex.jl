@@ -3,6 +3,8 @@ Demultiplex.jl
 
 
 """
+using DataFrames, CSV, Glob
+
 
 function potential_mismatches(og_barcode::String, mismatch::Int64 = 1)
     potentials = []
@@ -103,7 +105,7 @@ function demultiplex(R1::String, Map::String, Dir::String, Reads::String="Single
 
     # set up our mapping file - this is our mapping file in txt format 
     if endswith(Map, ".csv") == true
-        mapping = CSV.read(Map, DataFrame) 
+        mapping = CSV.read(Map, DataFrames.DataFrame) 
         barcodes = Array(mapping[!,:BarcodeSequence])
         IDs = Array(mapping[!,:"#SampleID"])
         
@@ -115,7 +117,7 @@ function demultiplex(R1::String, Map::String, Dir::String, Reads::String="Single
 
     # set up our mapping file - this is our mapping file in txt format 
     if endswith(Map, ".txt") == true
-        mapping = CSV.read(map, DataFrame) 
+        mapping = CSV.read(map, DataFrames.DataFrame) 
         barcodes = Array(mapping[!,:BarcodeSequence])
         IDs = Array(mapping[!,:"#SampleID"])
 
