@@ -12,5 +12,11 @@ Active development is still underway but the most current version can be downloa
 ```julia 
 using Pkg; Pkg.add("https://github.com/phorve/Nucleotide_Essentials.jl")
 ```
+## Current Functions: 
+* `readFastq` - Import a .fastq file into Julia
+* `potential_mismatches` - Create a list of potential mismatch barcodes (mutations + deletions)
+* `demultiplex_se` - Demultiplex single-end Illumina reads
+* `demultiplex_pe` - Demultiplex paired-end Illumina reads
+* `PlotQuality` - Visualize quality of .fastq file
 
 Full documentation can be found at [here](https://www.patrickfhorve.com/Nucleotide_Essentials.jl/dev/)
