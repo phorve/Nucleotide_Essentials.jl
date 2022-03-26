@@ -10,7 +10,7 @@
 
 Active development is still underway but the most current version can be downloaded from the REPL using: 
 ```julia 
-using Pkg; Pkg.add("https://github.com/phorve/Nucleotide_Essentials.jl")
+using Pkg; Pkg.add(url = "https://github.com/phorve/Nucleotide_Essentials.jl")
 ```
 ## Current Functions: 
 * `readFastq` - Import a .fastq file into Julia
