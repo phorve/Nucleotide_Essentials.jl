@@ -1,0 +1,2 @@
+[![Build status (Github Actions)](https://github.com/phorve/Nucleotide_Essentials.jl/workflows/CI/badge.svg)](https://github.com/phorve/Nucleotide_Essentials.jl/actions)
+[![codecov.io](http://codecov.io/github/phorve/Nucleotide_Essentials.jl/coverage.svg?branch=main)](http://codecov.io/github/phorve/Nucleotide_Essentials.jl?branch=main)
