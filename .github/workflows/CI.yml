@@ -66,5 +66,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
-
-curl -Os https://uploader.codecov.io/latest/macos/codecov chmod +x codecov ./codecov
