@@ -1,4 +1,4 @@
-# Nucleotide_Essentials.jl
+# <img src="assets/nucleotide_essentials_logo.svg" width="30%" align="right" /> Nucleotide_Essentials.jl
 
 [![Build status](https://github.com/phorve/Nucleotide_Essentials.jl/workflows/CI/badge.svg)](https://github.com/phorve/Nucleotide_Essentials.jl/actions)
 
