@@ -10,7 +10,9 @@ import  CSV,
         Logging
 
 export  readFastq,
+        readFasta,
         FastqRecord,
+        FastaRecord,
         potential_mismatches,
         demultiplex_se,
         demultiplex_pe,
@@ -18,6 +20,7 @@ export  readFastq,
         PlotQuality
 
 include("Reading/readFastq.jl")
+include("Reading/readFasta.jl")
 include("Demultiplex/Demultiplex.jl")
 include("Visualization/PlotQuality.jl")
 
