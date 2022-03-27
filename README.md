@@ -14,7 +14,7 @@ using Pkg; Pkg.add(url = "https://github.com/phorve/Nucleotide_Essentials.jl")
 ```
 ## Current Functions: 
 * `readFastq` - Import a .fastq file into Julia
-* `readFasta` - Import a .fastq file into Julia
+* `readFasta` - Import a .fasta file into Julia
 * `potential_mismatches` - Create a list of potential mismatch barcodes (mutations + deletions)
 * `demultiplex_se` - Demultiplex single-end Illumina reads
 * `demultiplex_pe` - Demultiplex paired-end Illumina reads
