@@ -6,12 +6,14 @@
 ## Data Types
 ```@docs
 FastqRecord
+FastaRecord
 ```
 
 ## Functions
 
 ```@docs
 readFastq
+readFasta
 PlotQuality
 potential_mismatches
 reverse_complement
