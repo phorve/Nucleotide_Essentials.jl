@@ -21,12 +21,12 @@ end
 
 supported keyword arguments include: 
 
-* 'Path::String': The full or relative path to a .fastq file
+* 'Path::String': The full or relative path to a .fasta file
 
 # Example: 
 
 ```julia
-# Supply the path to a .Fastq file that you would like to import - it is recommended to include `;` in your command to prevent printing potentially large .fasta files in the REPL
+# Supply the path to a .fasta file that you would like to import - it is recommended to include `;` in your command to prevent printing potentially large .fasta files in the REPL
 myfasta = readFasta("myfasta.fasta");
 ```
 """
@@ -40,5 +40,6 @@ function readFasta(path::String)
         hold_temp = vcat(hold_temp, temp)
     end 
 out = FastaRecord(hold_temp[1:2:end], hold_temp[2:2:end], rsplit(path, "/", limit = 2)[2]);
+displaysize(30,30)
 return(out)
 end 
