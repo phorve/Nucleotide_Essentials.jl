@@ -30,7 +30,7 @@ supported keyword arguments include:
 myfasta = readFasta("myfasta.fasta");
 ```
 """
-function readFasta(Path::String)
+function readFasta(path::String)
     file = rsplit(path, "/", limit = 2)[2]
     input = read(path, String)
     split_fastq = split(input, ">", keepempty = false)
