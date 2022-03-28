@@ -110,8 +110,8 @@ supported keyword arguments include:
 
 * 'R1::String': Path to multiplexed reads   
 * 'Map::String': Path to the mapping file 
-# 'mismatch::Int64=0' (optional): Number of allowed mismatches in barcode. Potential options include 0 or 1. If 1 mismatch, computation time will significantly increase. Default is to allow for 0 mismatches (exact matches only). 
-# 'debug::Bool=false' (optional): If true, a log file will be created and debugging data will be printed while the function is running (default is false).
+* 'mismatch::Int64=0' (optional): Number of allowed mismatches in barcode. Potential options include 0 or 1. If 1 mismatch, computation time will significantly increase. Default is to allow for 0 mismatches (exact matches only). 
+* 'debug::Bool=false' (optional): If true, a log file will be created and debugging data will be printed while the function is running (default is false).
 
 # Example: 
 ```julia
