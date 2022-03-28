@@ -14,6 +14,7 @@ export  readFastq,
         FastqRecord,
         FastaRecord,
         writeFasta,
+        FastqtoFasta,
         potential_mismatches,
         demultiplex_se,
         demultiplex_pe,
@@ -23,6 +24,7 @@ export  readFastq,
 include("Reading/readFastq.jl")
 include("Reading/readFasta.jl")
 include("Writing/writeFasta.jl")
+include("Writing/FastqtoFasta.jl")
 include("Demultiplex/Demultiplex.jl")
 include("Visualization/PlotQuality.jl")
 
