@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/CI.yml)
 [![Runtests](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/Runtests.yml/badge.svg)](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/Runtests.yml)
+[![codecov](https://codecov.io/gh/phorve/Nucleotide_Essentials.jl/branch/main/graph/badge.svg?token=ET2C1TKZGP)](https://codecov.io/gh/phorve/Nucleotide_Essentials.jl)
 
 **Nucleotide_Essentials.jl** is a collection of tools for working with next-generation sequencing reads currently under development and testing.
 
