@@ -21,18 +21,18 @@ supported keyword arguments include:
 ```julia
 # .fasta files can be written as from an already imported FastaRecord in Julia 
 myfasta = readFasta("myfasta.fasta");
-write_fasta(input_fasta, "example/output/directory, false)
+writeFasta(input_fasta, "example/output/directory, false)
 
 # .fasta files can be written as a .fasta.gz from an already imported FastaRecord in Julia 
 myfasta = readFasta("myfasta.fasta");
-write_fasta(input_fasta, "example/output/directory", true)
+writeFasta(input_fasta, "example/output/directory", true)
 
 # .fasta files with multiple sequences can be read and written as individual .fasta or .fasta.gz in the same step
 myfasta = readFasta("myfasta.fasta");
-write_fasta(readFasta("/myfasta.fasta"), "example/output/directory", true);
+writeFasta(readFasta("/myfasta.fasta"), "example/output/directory", true);
 ```
 """
-function write_fasta(input_fasta::FastaRecord, out::String, compressed::Bool)
+function writeFasta(input_fasta::FastaRecord, out::String, compressed::Bool)
     if compressed == true
         for i in 1:length(input_fasta.ID)
             temp_record = string(">", input_fasta.ID[i], "\n", input_fasta.sequence[i])        
