@@ -14,6 +14,7 @@ FastaRecord
 ```@docs
 readFastq
 readFasta
+writeFasta
 PlotQuality
 potential_mismatches
 reverse_complement
