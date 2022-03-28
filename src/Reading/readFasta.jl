@@ -16,6 +16,8 @@ end
 """
     Nucleotide_Essentials.readFasta
 
+Imports a .fasta file into julia
+
     readFasta(Path::String)
 .fasta file => readFasta(Path) => FastaRecord(ID, sequence, filename)
 
