@@ -1,5 +1,3 @@
-using CodecZlib
-
 """
     Nucleotide_Essentials.writeFasta
 
