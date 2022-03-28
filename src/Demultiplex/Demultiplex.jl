@@ -206,7 +206,7 @@ function demultiplex_se(
                         break
                     else
                         @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                        out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                        out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                         iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                         write(iostream, out_string2)
                         close(iostream)
@@ -224,7 +224,7 @@ function demultiplex_se(
                             break
                         else
                             @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                            out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                            out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                             iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                             write(iostream, out_string2)
                             close(iostream)
@@ -271,7 +271,7 @@ function demultiplex_se(
                         else
                             @debug("Else after if 1.1")
                             @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                            out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                            out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                             iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                             write(iostream, out_string2)
                             close(iostream)
@@ -289,7 +289,7 @@ function demultiplex_se(
                                 break
                             else
                                 @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                                out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                                out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                                 iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                                 write(iostream, out_string2)
                                 close(iostream)
@@ -468,7 +468,7 @@ function demultiplex_pe(
                         break
                     else
                         @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                        out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                        out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                         iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                         write(iostream, out_string2)
                         close(iostream)
@@ -486,7 +486,7 @@ function demultiplex_pe(
                             break
                         else
                             @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                            out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                            out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                             iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                             write(iostream, out_string2)
                             close(iostream)
@@ -533,7 +533,7 @@ function demultiplex_pe(
                         else
                             @debug("Else after if 1.1")
                             @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                            out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                            out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                             iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                             write(iostream, out_string2)
                             close(iostream)
@@ -551,7 +551,7 @@ function demultiplex_pe(
                                 break
                             else
                                 @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                                out_string2 = string("@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
+                                out_string2 = string("\n@", IDs[b], "\n", chop(seqs[s], head = Integer(barcode_length)), "\n+\n", chop(qual[s], head = Integer(barcode_length)))
                                 iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                                 write(iostream, out_string2)
                                 close(iostream)
@@ -606,7 +606,7 @@ function demultiplex_pe(
                         break
                     else
                         @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                        out_string2 = string("@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
+                        out_string2 = string("\n@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
                         iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                         write(iostream, out_string2)
                         close(iostream)
@@ -624,7 +624,7 @@ function demultiplex_pe(
                             break
                         else
                             @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                            out_string2 = string("@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
+                            out_string2 = string("\n@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
                             iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                             write(iostream, out_string2)
                             close(iostream)
@@ -672,7 +672,7 @@ function demultiplex_pe(
                         else
                             @debug("Else after if 1.1")
                             @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                            out_string2 = string("@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
+                            out_string2 = string("\n@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
                             iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                             write(iostream, out_string2)
                             close(iostream)
@@ -690,7 +690,7 @@ function demultiplex_pe(
                                 break
                             else
                                 @debug(string("Barcode found - writing to fastq file for ", IDs[b]))
-                                out_string2 = string("@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
+                                out_string2 = string("\n@", IDs[b], "\n", (chop(seqs2[s], tail = Integer(barcode_length))), "\n+\n", (chop(qual2[s], tail = Integer(barcode_length))))
                                 iostream = open(string(Dir, "/", Out, "/", sample, file_end), "a")
                                 write(iostream, out_string2)
                                 close(iostream)
