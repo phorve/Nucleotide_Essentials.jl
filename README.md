@@ -22,4 +22,4 @@ using Pkg; Pkg.add(url = "https://github.com/phorve/Nucleotide_Essentials.jl")
 * `demultiplex_pe` - Demultiplex paired-end Illumina reads
 * `PlotQuality` - Visualize quality of .fastq file
 
-Full documentation can be found at [here](https://www.patrickfhorve.com/Nucleotide_Essentials.jl/dev/)
+Full documentation can be found at [here](https://www.patrickfhorve.com/Nucleotide_Essentials.jl/v0.1/)
