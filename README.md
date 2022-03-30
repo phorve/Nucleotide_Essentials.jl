@@ -9,9 +9,12 @@
 ## Installation:
 
 Active development is still underway but the most current version can be downloaded from the REPL using: 
-```julia 
-using Pkg; Pkg.add(url = "https://github.com/phorve/Nucleotide_Essentials.jl")
+
+The package is registered in the General registry and so can be installed at the REPL with: 
+```julia
+] add Nucleotide_Essentials
 ```
+
 ## Current Functions: 
 * `readFastq` - Import a .fastq file into Julia
 * `readFasta` - Import a .fasta file into Julia
