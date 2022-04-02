@@ -19,13 +19,16 @@ export  readFastq,
         demultiplex_se,
         demultiplex_pe,
         reverse_complement, 
-        PlotQuality
+        PlotQuality,
+        FilterQuality_se,
+        FilterQuality_pe
 
 include("Reading/readFastq.jl")
 include("Reading/readFasta.jl")
 include("Writing/writeFasta.jl")
 include("Writing/FastqtoFasta.jl")
 include("Demultiplex/Demultiplex.jl")
-include("Visualization/PlotQuality.jl")
+include("QualityTesting/PlotQuality.jl")
+include("QualityTesting/FilterQuality.jl")
 
 end  # end module 
