@@ -5,7 +5,7 @@ using DataFrames, CSV, Glob, Logging, StatsBase
 
 Returns an ```Vector{Any}``` of potential barcodes with a single nucleotide change, including both deletions and substitutions
 
-supported keyword arguments include:
+Supported keyword arguments include:
 
 * 'Path::String': The full or relative path to a .fastq file
 * 'mismatch::Int64': The number of altered nucleotides to include (1 is only supported at this time)
@@ -68,7 +68,7 @@ end
 
 Takes a string of nucleotide bases and returns the reverse complement of that string. Accepts inputs of ```String``` and ```SubString{String}``` (input from a FastqRecord)
 
-supported keyword arguments include:
+Supported keyword arguments include:
 
 * 'sequence::Union{String, SubString{String}}': A string sequence of nucleotide bases or sequence entry from a FastqRecord
 
@@ -106,7 +106,7 @@ EXAMPLE MAPPING FILE:
 | Sample7  | Barcode7        |
 | Sample8  | Barcode8        |
 
-supported keyword arguments include:
+Supported keyword arguments include:
 
 * 'R1::String': Path to multiplexed reads   
 * 'Map::String': Path to the mapping file 
@@ -362,7 +362,7 @@ EXAMPLE MAPPING FILE:
 | Sample7  | Barcode7        |
 | Sample8  | Barcode8        |
 
-supported keyword arguments include:
+Supported keyword arguments include:
 
 * 'R1::String': Path to forward multiplexed reads   
 * 'R2::String': Path to reverse multiplexed reads   
