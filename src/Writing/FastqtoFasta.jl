@@ -3,11 +3,11 @@
 
 Converts a FastqRecord to a FastaRecord. Can also input and convert a .fastq file to a FastaRecord in the same function. 
 
-    FastqtoFasta(Fastq::Union{String, FastqRecord})
+FastqtoFasta(Fastq::Union{String, FastqRecord})
 .fastq file => FastqtoFasta(Fastq) => FastaRecord(ID, sequence, filename)
 FastqRecord(ID, sequence, quality, filename) => FastqtoFasta(Fastq) => FastaRecord(ID, sequence, filename)
 
-supported keyword arguments include: 
+Supported keyword arguments include: 
 
 * 'Fastq::Union{String, FastqRecord}': 
     * The full or relative path to a .fastq file
