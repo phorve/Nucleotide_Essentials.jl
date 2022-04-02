@@ -29,3 +29,10 @@ demultiplex_pe
 
 ```@index
 ```
+## Change Log 
+
+#### Nucleotide_Essentials v0.2.0
+
+* Add support for quality filtering .fastq reads 
+* Add support for automatic quality profile encoding detection 
+* Minor documentation updates 
