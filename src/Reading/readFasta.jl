@@ -21,7 +21,7 @@ Imports a .fasta file into julia
     readFasta(Path::String)
 .fasta file => readFasta(Path) => FastaRecord(ID, sequence, filename)
 
-supported keyword arguments include: 
+Supported keyword arguments include: 
 
 * 'Path::String': The full or relative path to a .fasta file
 
