@@ -1,12 +1,12 @@
 """
     Nucleotide_Essentials.writeFasta
 
-    readFasta(Path::String)
-    FastaRecord => write_fasta(input_fasta, out, compressed) => .fasta file/.fasta.gz file 
+readFasta(Path::String)
+FastaRecord => write_fasta(input_fasta, out, compressed) => .fasta file/.fasta.gz file 
 
 Creates a single or multiple entry FastaRecord and outputs either a .fasta or compressed .fasta.gz file to the desired directory
 
-supported keyword arguments include: 
+Supported keyword arguments include: 
 
 * 'input_fasta::FastaRecord': A FastaRecord with either a single entry or multiple entries 
 * 'out::String': The full or relative path to the directory where files should be written to
