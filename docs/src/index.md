@@ -16,6 +16,8 @@ readFastq
 readFasta
 writeFasta
 FastqtoFasta
+FilterQuality_se
+FilterQuality_pe
 PlotQuality
 potential_mismatches
 reverse_complement
