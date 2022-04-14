@@ -1,8 +1,6 @@
 """
     Nucleotide_Essentials.FastqRecord
-
 # Components
-
 * ID: The unique sequence identifier associated with that entry
 * sequence: The nucleotide sequence of that entry
 * quality: The quality scores of that entry 
@@ -17,23 +15,24 @@ end
 
 """
     Nucleotide_Essentials.readFastq
-
     readFastq(Path::String)
 .fastq file => readFastq(Path) => FastqRecord(ID, sequence, quality, filename)
-
-Supported keyword arguments include: 
-
+supported keyword arguments include: 
 * 'Path::String': The full or relative path to a .fastq file
-
 # Example: 
-
 ```julia
 # Supply the path to a .Fastq file that you would like to import
 myfastq = readFastq("myfastq.fastq")
 ```
 """
 function readFastq(Path::String)
-    file = rsplit(Path, "/", limit = 2)[1]
+    try
+        global file = rsplit(Path, "/", limit = 2)[2]
+    catch err
+        if isa(err, BoundsError)
+            global file = rsplit(Path, "/", limit = 2)[1]
+        end 
+    end 
     input = read(Path, String)
     input2 = replace(input, "\n@" => "Z")
     input3 = replace(input2, "@" => "Z", count = 1)
