@@ -17,8 +17,11 @@ end
     Nucleotide_Essentials.readFastq
     readFastq(Path::String)
 .fastq file => readFastq(Path) => FastqRecord(ID, sequence, quality, filename)
+
 supported keyword arguments include: 
-* 'Path::String': The full or relative path to a .fastq file
+
+* ```Path::String```: The full or relative path to a .fastq file
+
 # Example: 
 ```julia
 # Supply the path to a .Fastq file that you would like to import
