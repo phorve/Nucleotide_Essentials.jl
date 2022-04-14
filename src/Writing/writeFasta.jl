@@ -8,11 +8,11 @@ Creates a single or multiple entry FastaRecord and outputs either a .fasta or co
 
 Supported keyword arguments include: 
 
-* 'input_fasta::FastaRecord': A FastaRecord with either a single entry or multiple entries 
-* 'out::String': The full or relative path to the directory where files should be written to
-* 'compressed::Bool': Whether or not to write the .fasta files as compressed files or not. 
-    * If `true`, files will written as .fasta.gz files
-    * If `false`, files will written as .fasta files
+* ```input_fasta::FastaRecord```: A FastaRecord with either a single entry or multiple entries 
+* ```out::String```: The full or relative path to the directory where files should be written to
+* ```compressed::Bool```: Whether or not to write the .fasta files as compressed files or not. 
+    * If ```true```, files will written as .fasta.gz files
+    * If ```false```, files will written as .fasta files
 
 # Example: 
 
