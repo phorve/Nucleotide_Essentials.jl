@@ -7,8 +7,8 @@ Returns an ```Vector{Any}``` of potential barcodes with a single nucleotide chan
 
 Supported keyword arguments include:
 
-* 'Path::String': The full or relative path to a .fastq file
-* 'mismatch::Int64': The number of altered nucleotides to include (1 is only supported at this time)
+* ```Path::String```: The full or relative path to a .fastq file
+* ```mismatch::Int64```: The number of altered nucleotides to include (1 is only supported at this time)
 
 # Example:
 ```julia
@@ -70,7 +70,7 @@ Takes a string of nucleotide bases and returns the reverse complement of that st
 
 Supported keyword arguments include:
 
-* 'sequence::Union{String, SubString{String}}': A string sequence of nucleotide bases or sequence entry from a FastqRecord
+* ```sequence::Union{String, SubString{String}}```: A string sequence of nucleotide bases or sequence entry from a FastqRecord
 
 # Example: 
 ```julia
@@ -108,10 +108,10 @@ EXAMPLE MAPPING FILE:
 
 Supported keyword arguments include:
 
-* 'R1::String': Path to multiplexed reads   
-* 'Map::String': Path to the mapping file 
-* 'mismatch::Int64=0' (optional): Number of allowed mismatches in barcode. Potential options include 0 or 1. If 1 mismatch, computation time will significantly increase. Default is to allow for 0 mismatches (exact matches only). 
-* 'debug::Bool=false' (optional): If true, a log file will be created and debugging data will be printed while the function is running (default is false).
+* ```R1::String```: Path to multiplexed reads   
+* ```Map::String```: Path to the mapping file 
+* ```mismatch::Int64=0``` (optional): Number of allowed mismatches in barcode. Potential options include 0 or 1. If 1 mismatch, computation time will significantly increase. Default is to allow for 0 mismatches (exact matches only). 
+* ```debug::Bool=false``` (optional): If true, a log file will be created and debugging data will be printed while the function is running (default is false).
 
 # Example: 
 ```julia
@@ -364,11 +364,11 @@ EXAMPLE MAPPING FILE:
 
 Supported keyword arguments include:
 
-* 'R1::String': Path to forward multiplexed reads   
-* 'R2::String': Path to reverse multiplexed reads   
-* 'Map::String': Path to the mapping file 
-* 'mismatch::Int64=0' (optional): Number of allowed mismatches in barcode. Potential options include 0 or 1. If 1 mismatch, computation time will significantly increase. Default is to allow for 0 mismatches (exact matches only). 
-* 'debug::Bool=false' (optional): If true, a log file will be created and debugging data will be printed while the function is running (default is false).
+* ```R1::String```: Path to forward multiplexed reads   
+* ```R2::String```: Path to reverse multiplexed reads   
+* ```Map::String```: Path to the mapping file 
+* ```mismatch::Int64=0``` (optional): Number of allowed mismatches in barcode. Potential options include 0 or 1. If 1 mismatch, computation time will significantly increase. Default is to allow for 0 mismatches (exact matches only). 
+* ```debug::Bool=false``` (optional): If true, a log file will be created and debugging data will be printed while the function is running (default is false).
 
 # Example: 
 ```julia
