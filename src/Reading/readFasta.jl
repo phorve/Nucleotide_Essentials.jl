@@ -23,7 +23,7 @@ Imports a .fasta file into julia
 
 Supported keyword arguments include: 
 
-* 'Path::String': The full or relative path to a .fasta file
+* ```Path::String```: The full or relative path to a .fasta file
 
 # Example: 
 
