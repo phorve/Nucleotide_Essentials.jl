@@ -18,10 +18,10 @@ The plotted lines show summary statistics at each sequence position:
 
 Supported keyword arguments include:
 
-* 'Input::FastqRecord': The name of a FastqRecord for plotting
-* 'verbose::Bool' (optional): Whether or not to show some intermediary feedback on the progress of the function (default = false)
-* 'outputfigure::Bool' (optional): Whether or not to output a .png file with the created QualityPlot (default = false)
-* 'figurepath::String' (optional): If outputting a .png figure to file, specify the path to a directory where the file should be written to (default = `pwd()`)
+* ```Input::FastqRecord```: The name of a FastqRecord for plotting
+* ```verbose::Bool``` (optional): Whether or not to show some intermediary feedback on the progress of the function (default = false)
+* ```outputfigure::Bool``` (optional): Whether or not to output a .png file with the created QualityPlot (default = false)
+* ```figurepath::String``` (optional): If outputting a .png figure to file, specify the path to a directory where the file should be written to (default = ```pwd()```)
 
 # Example:
 ```julia
