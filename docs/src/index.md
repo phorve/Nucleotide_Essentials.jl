@@ -1,4 +1,4 @@
-# Nucleotide_Essentials.jl
+# <img src="assets/nucleotide_essentials_logo.svg" width="30%" align="right" /> Nucleotide_Essentials.jl
 
 ```@contents
 ```
