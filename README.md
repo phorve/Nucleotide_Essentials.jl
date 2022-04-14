@@ -29,4 +29,4 @@ The package is registered in the General registry and so can be installed at the
 
 For bug fixes, new features, and future suggestions, open an issue! 
 
-Full documentation can be found at [here](https://www.patrickfhorve.com/Nucleotide_Essentials.jl/v0.2/)
+Full documentation can be found at [here](https://www.patrickfhorve.com/Nucleotide_Essentials.jl/stable/)
