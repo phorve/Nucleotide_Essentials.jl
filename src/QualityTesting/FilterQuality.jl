@@ -11,14 +11,14 @@ Reads are filtered based upon the number of [expected errors](https://academic.o
 
 Stringent filtering (```maxEE = 1```) is used by default but can be adjusted by the user. 
 
-Reads that pass the filtering parameters are output to a file named `R1_FilteredReads.fastq` in the user-determined directory, as indicated by ```out```. 
+Reads that pass the filtering parameters are output to a file ending in `_FilteredReads.fastq` in the user-determined directory, as indicated by ```out```. 
 
 Supported keyword arguments include: 
     
-* `R1::String`: Path to the reads to undergo quality filtering 
-* `out::String`: Path to the directory where reads that pass the quality filtering should be written 
-* 'maxEE::Int64' (optional): The max number of expected errors a read can include as the filtering parameter (default: ```maxEE = 1```)
-* 'verbose::Bool' (optional): Whether or not to show some intermediary feedback on the progress of the function (default = false)
+* ```read1::String```: Path to the reads to undergo quality filtering 
+* ```out::String```: Path to the directory where reads that pass the quality filtering should be written 
+* ```maxEE::Int64``` (optional): The max number of expected errors a read can include as the filtering parameter (default: ```maxEE = 1```)
+* ```verbose::Bool``` (optional): Whether or not to show some intermediary feedback on the progress of the function (default = false)
 
 # Example: 
 ```julia
@@ -313,27 +313,30 @@ Stringent filtering (```maxEE = 1```) is used by default but can be adjusted by 
 Output Files: 
 
 * If both the forward and reverse reads pass the filtering parameters: 
-    * Forward reads are output to a file named `R1_Paired.fastq` in the user-determined directory, as indicated by ```out```
-    * Reverse reads are output to a file named `R2_Paired.fastq` in the user-determined directory, as indicated by ```out```
+    * Forward reads are output to a file ending in `R1_Paired_filtered.fastq` in the user-determined directory, as indicated by ```out```
+    * Reverse reads are output to a file ending in `R2_Paired_filtered.fastq` in the user-determined directory, as indicated by ```out```
 * If only the forward read passes the filtering parameters: 
-    * Forward reads are output to a file named `R1_Unpaired.fastq` in the user-determined directory, as indicated by ```out```
+    * Forward reads are output to a file ending in `R1_Unpaired_filtered.fastq` in the user-determined directory, as indicated by ```out```
     * Reverse reads are not written to a file 
 * If only the reverse read passes the filtering parameters: 
-    * Reverse reads are output to a file named `R2_Unpaired.fastq` in the user-determined directory, as indicated by ```out```
+    * Reverse reads are output to a file ending in `R2_Unpaired_filtered.fastq` in the user-determined directory, as indicated by ```out```
     * Forward reads are not written to a file 
     
 
 Supported keyword arguments include: 
     
-* `R1::String`: Path to the forward reads to undergo quality filtering 
-* `R2::String`: Path to the reverse reads to undergo quality filtering 
-* `out::String`: Path to the directory where reads that pass the quality filtering should be written 
-* 'maxEE::Int64' (optional): The max number of expected errors a read can include as the filtering parameter (default: ```maxEE = 1```)
-* 'verbose::Bool' (optional): Whether or not to show some intermediary feedback on the progress of the function (default = false)
+* ```read1::String```: Path to the forward reads to undergo quality filtering 
+* ```read2::String```: Path to the reverse reads to undergo quality filtering 
+* ```out::String```: Path to the directory where reads that pass the quality filtering should be written 
+* ```maxEE::Int64``` (optional): The max number of expected errors a read can include as the filtering parameter (default: ```maxEE = 1```)
+* ```verbose::Bool``` (optional): Whether or not to show some intermediary feedback on the progress of the function (default = false)
 
 # Example: 
 ```julia
 FilterQuality_pe("forward_R1.fasta", "reverse_R2.fasta", "/outdirectory")
+
+# changing the filtering parameters 
+FilterQuality_pe("forward_R1.fasta", "reverse_R2.fasta", "/outdirectory", 2, true)
 ```
 """
 function FilterQuality_pe(read1::String, read2::String, out::String, maxEE::Int64 = 1, verbose::Bool = false)
@@ -711,10 +714,3 @@ function FilterQuality_pe(read1::String, read2::String, out::String, maxEE::Int6
     println("")
     printstyled(string(UnpairedR2Succes, " (", (round(UnpairedR2Succes/length(seqs)*100, digits = 2)), "%) reverse reads passed without a matching forward read\n"), color = :yellow)
 end
-
-#@time forwards = readFastq("/Users/patrick/Desktop/demultiplex_ex/Sam78-125_S3_L001_R1_001.fastq");
-# 114.615315 seconds (1.67 G allocations: 106.377 GiB, 10.11% gc time)
-#@time reverse = readFastq("/Users/patrick/Desktop/demultiplex_ex/Sam78-125_S3_L001_R2_001.fastq");
-# 114.331226 seconds (1.67 G allocations: 106.204 GiB, 10.07% gc time)
-#@time FilterQuality_pe(forwards, reverse, "/Users/patrick/Desktop/demultiplex_ex/Filtered", 2, true);
-#@time FilterQuality_se(reverse, "/Users/patrick/Desktop/demultiplex_ex/Filtered", 2, true);
