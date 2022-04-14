@@ -9,7 +9,7 @@ FastqRecord(ID, sequence, quality, filename) => FastqtoFasta(Fastq) => FastaReco
 
 Supported keyword arguments include: 
 
-* 'Fastq::Union{String, FastqRecord}': 
+* ```Fastq::Union{String, FastqRecord}```: 
     * The full or relative path to a .fastq file
     * A FastqRecord
 
