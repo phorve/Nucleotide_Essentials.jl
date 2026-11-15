@@ -1,21 +1,19 @@
 # <img src="assets/nucleotide_essentials_logo.svg" width="30%" align="right" /> Nucleotide_Essentials.jl
 
 [![CI](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/CI.yml)
-[![Runtests](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/Runtests.yml/badge.svg)](https://github.com/phorve/Nucleotide_Essentials.jl/actions/workflows/Runtests.yml)
 [![codecov](https://codecov.io/gh/phorve/Nucleotide_Essentials.jl/branch/main/graph/badge.svg?token=ET2C1TKZGP)](https://codecov.io/gh/phorve/Nucleotide_Essentials.jl)
 
-**Nucleotide_Essentials.jl** is a collection of tools for working with Illumina next-generation sequencing reads currently under development and testing.
+**Nucleotide_Essentials.jl** is a collection of tools for working with Illumina next-generation sequencing reads.
 
-## Installation:
+## Installation
 
-Active development is still underway but the most current version can be downloaded from the REPL using: 
+The package is registered in the General registry, so it can be installed from the REPL with:
 
-The package is registered in the General registry and so can be installed at the REPL with: 
 ```julia
 ] add Nucleotide_Essentials
 ```
 
-## Current Functions: 
+## Functions
 * `readFastq` - Import a .fastq file into Julia
 * `readFasta` - Import a .fasta file into Julia
 * `writeFasta` - Write a .fasta or .fasta.gz to file
@@ -30,3 +28,7 @@ The package is registered in the General registry and so can be installed at the
 For bug fixes, new features, and future suggestions, open an issue! 
 
 Full documentation can be found at [here](https://www.patrickfhorve.com/Nucleotide_Essentials.jl/stable/)
+
+## License
+
+MIT — see [LICENSE.md](LICENSE.md).
